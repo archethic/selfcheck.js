@@ -15,3 +15,6 @@ selfcheck.addUser("홍길동", "010101", "1234") //학생등록
 
 selfcheck.request() //자가진단
 ```
+
+# Helper
+Thanks RSA encrypt function by 새싹맴버
