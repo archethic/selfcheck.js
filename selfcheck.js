@@ -70,28 +70,15 @@ module.exports = (function () {
                 "password": this.encrypt(this.setting.userInfo[i].passcode),
                 "deviceUuid": ""
             })).ignoreContentType(true).ignoreHttpErrors(true).post().text();
-        return Jsoup.connect("https://" + this.setting.baseURL + "/registerServey")
-            .header("Content-Type", "application/json").header("Authorization", this.setting.tokenPass)
-            .requestBody(JSON.stringify({
-                "rspns01": "1",
-                "rspns02": "1",
-                "rspns09": "0",
-                "rspns00": "Y",
-                'upperToken': this.setting.tokenPass,
-                'upperUserNameEncpt': this.setting.userInfo[i].originalName
-            })).ignoreContentType(true).ignoreHttpErrors(true).post().text();
+        return true
     }
 
     selfCheck.prototype.request = function () {
         let result = new Array();
         for(var i = 0; i < this.setting.userInfo.length; i++) {
-            result[i] = (i + 1) + "번 " + this.setting.userInfo.originalName + "\n" + this.submit(i) + "\n\n";
+            this.submit(i)
         }
-        let res = "";
-        for(i = 0;i < this.setting.userInfo.length;i++) {
-            res += result[i];
-        }
-        return res, true;
+        return true;
     }
 
     /**
