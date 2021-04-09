@@ -21,7 +21,7 @@ module.exports = (function () {
         this.setting.userInfo.push({
             "originalName": name,
             "encryptName": this.encrypt(name),
-            "birth_day": this.encrypt(passcode),
+            "birth_day": this.encrypt(birth),
             "passcode": passcode
         })
         FS.write(path, JSON.stringify(this.setting.userInfo, null, 4));
