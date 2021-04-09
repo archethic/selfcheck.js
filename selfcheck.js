@@ -74,7 +74,6 @@ module.exports = (function () {
     }
 
     selfCheck.prototype.request = function () {
-        let result = new Array();
         for(var i = 0; i < this.setting.userInfo.length; i++) {
             this.submit(i)
         }
