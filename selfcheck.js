@@ -38,15 +38,15 @@ module.exports = (function () {
         else if(loc.indexOf("대전") !== -1) this.setting.location = "06";
         else if(loc.indexOf("울산") !== -1) this.setting.location = "07";
         else if(loc.indexOf("세종") !== -1) this.setting.location = "08";
-        else if(loc.indexOf("경기도") !== -1) this.setting.location = "09";
-        else if(loc.indexOf("강원도") !== -1) this.setting.location = "10";
-        else if(loc.indexOf("충청북도") !== -1) this.setting.location = "11";
-        else if(loc.indexOf("충청남도") !== -1) this.setting.location = "12";
-        else if(loc.indexOf("전라북도") !== -1) this.setting.location = "13";
-        else if(loc.indexOf("전라남도") !== -1) this.setting.location = "14";
-        else if(loc.indexOf("경상북도") !== -1) this.setting.location = "15";
-        else if(loc.indexOf("경상남도") !== -1) this.setting.location = "16";
-        else if(loc.indexOf("제주") !== -1) this.setting.location = "17";
+        else if(loc.indexOf("경기도") !== -1) this.setting.location = "10";
+        else if(loc.indexOf("강원도") !== -1) this.setting.location = "11";
+        else if(loc.indexOf("충청북도") !== -1) this.setting.location = "12";
+        else if(loc.indexOf("충청남도") !== -1) this.setting.location = "13";
+        else if(loc.indexOf("전라북도") !== -1) this.setting.location = "14";
+        else if(loc.indexOf("전라남도") !== -1) this.setting.location = "15";
+        else if(loc.indexOf("경상북도") !== -1) this.setting.location = "16";
+        else if(loc.indexOf("경상남도") !== -1) this.setting.location = "17";
+        else if(loc.indexOf("제주") !== -1) this.setting.location = "18";
         else throw new TypeError("Loc is not input range");
 
         const response = JSON.parse(Jsoup.connect("https://hcs.eduro.go.kr/v2/searchSchool?lctnScCode=" + this.setting.location +"&orgName="+ schoolName +"&loginType=school")
